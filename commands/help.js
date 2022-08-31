@@ -8,7 +8,7 @@ module.exports = {
             .addFields( 
                 { name: ".join", value: 'Join in on the CL/EL predictions betting to win (or lose) titles!' },
                 { name: ".fixtures", value: 'See the current games to bet on' },
-                { name: '.predict1 / .predict2 / .predict3', value: 'Give your predictions to the games depending on the group. For example to give your predictions on the games in group 1 you do: .predict1 2-0 3-1 4-0 0-0' },
+                { name: '.pred GW#GRP#', value: 'Predict Matches - EXAMPLE: .pred 12 4-4 2-2 3-3 1-1 | MUST have 2 numbers plus 4 sets of #-#' },
                 { name: '.mypred', value: 'Display your current predictions!'},
                 { name: ".standings", value: 'Show current standings from predictions' },
                 { name: ".fab", value: "See Fab's latest tweets" }, 

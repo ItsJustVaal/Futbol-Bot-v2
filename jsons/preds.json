@@ -1,0 +1,95 @@
+{
+  "Gameweek": 0,
+  "123499749696471042": {
+    "1": [
+      {
+        "group1": [
+          {
+            "Dinamo Zagreb": 2,
+            "Chelsea": 2
+          },
+          {
+            "Borussia Dortmund": 1,
+            "FC Copenhagen": 1
+          },
+          {
+            "Red Bull Salzburg": 2,
+            "AC Milan": 3
+          },
+          {
+            "Celtic": 2,
+            "Real Madrid": 3
+          }
+        ]
+      },
+      {
+        "group2": [
+          {
+            "RB Leipzig": "-",
+            "Shakhtar Donetsk": "-",
+            "Dinamo Zagreb": 2,
+            "Chelsea": 2
+          },
+          {
+            "Sevilla": "-",
+            "Manchester City": "-",
+            "Borussia Dortmund": 1,
+            "FC Copenhagen": 1
+          },
+          {
+            "Paris Saint Germain": "-",
+            "Juventus": "-"
+          },
+          {
+            "Benfica": "-",
+            "Maccabi Haifa": "-"
+          }
+        ]
+      }
+    ],
+    "2": [
+      {
+        "group1": [
+          {
+            "Plzen": 2,
+            "Inter": 2
+          },
+          {
+            "Sporting CP": 1,
+            "Tottenham": 1
+          },
+          {
+            "Liverpool": 2,
+            "Ajax": 3
+          },
+          {
+            "Rangers": 2,
+            "Napoli": 3
+          }
+        ]
+      }
+    ],
+    "4": [
+      {
+        "group1": [
+          {
+            "FC Copenhagen": 2,
+            "Manchester City": 2
+          },
+          {
+            "Maccabi Haifa": 1,
+            "Juventus": 1
+          },
+          {
+            "Dinamo Zagreb": 2,
+            "Red Bull Salzburg": 3
+          },
+          {
+            "AC Milan": 2,
+            "Chelsea": 3
+          }
+        ]
+      }
+    ]
+  }
+}

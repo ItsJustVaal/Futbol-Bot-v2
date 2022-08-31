@@ -32,12 +32,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HannahHoneybee/futbolbot.git"
+    "url": "git+https://github.com/ItsJustVaal/Futbol-Bot-v2"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/HannahHoneybee/futbolbot/issues"
+    "url": "https://github.com/ItsJustVaal/Futbol-Bot-v2/issues"
   },
-  "homepage": "https://github.com/HannahHoneybee/futbolbot#readme"
+  "homepage": "https://github.com/ItsJustVaal/Futbol-Bot-v2/blob/main/README.md"
 }
