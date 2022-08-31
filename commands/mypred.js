@@ -1,35 +1,45 @@
+// mypred syntax is now .mypred GW#GRP#
+// this doesn't have a null check yet but taking a break
+
+
 module.exports = {
     name: "mypred",
     execute(message){
+        const garb = message.content.split(' ')
+        const fs = require("fs");
         const { EmbedBuilder, Discord } = require('discord.js');
-        const data = require('../jsons/member.json');
-        const matches = require('../jsons/matches.json');
-        const thisID = message.author.id;
-  
-	
-        if(!data.hasOwnProperty(thisID))
+        const preds = JSON.parse(fs.readFileSync('jsons/preds.json'));
+        const thisID = '123499749696471042';
+        const gw = garb[1].slice(0,1)
+        const groupNum = garb[1].slice(1)
+        const group = 'group' + groupNum
+        let embedTable = [];
+        console.log(gw, groupNum)
+        if(!preds.hasOwnProperty(thisID))
             return message.reply('You are not in the System! Do .join first and then try again! If you think this is a mistake @ Hannah!');
-            let embed = new EmbedBuilder()
-                .addFields(
-                    { name: `Group 1:`, value: `
-                ${matches.FirstSet.Left1} ${data[thisID].one1Left}-${data[thisID].one1Right} ${matches.FirstSet.Right1}
-                ${matches.FirstSet.Left2} ${data[thisID].one2Left}-${data[thisID].one2Right} ${matches.FirstSet.Right2}
-                ${matches.FirstSet.Left3} ${data[thisID].one3Left}-${data[thisID].one3Right} ${matches.FirstSet.Right3}
-                ${matches.FirstSet.Left4} ${data[thisID].one4Left}-${data[thisID].one4Right} ${matches.FirstSet.Right4}
-            `, inline: true},
-                    { name: `Group 2:`, value: `
-                ${matches.SecondSet.Left1} ${data[thisID].two1Left}-${data[thisID].two1Right} ${matches.SecondSet.Right1}
-                ${matches.SecondSet.Left2} ${data[thisID].two2Left}-${data[thisID].two2Right} ${matches.SecondSet.Right2}
-                ${matches.SecondSet.Left3} ${data[thisID].two3Left}-${data[thisID].two3Right} ${matches.SecondSet.Right3}
-                ${matches.SecondSet.Left4} ${data[thisID].two4Left}-${data[thisID].two4Right} ${matches.SecondSet.Right4}
-            `, inline: true},
-                    { name: `Group 3:`, value: `
-                ${matches.ThirdSet.Left1} ${data[thisID].three1Left}-${data[thisID].three1Right} ${matches.ThirdSet.Right1}
-                ${matches.ThirdSet.Left2} ${data[thisID].three2Left}-${data[thisID].three2Right} ${matches.ThirdSet.Right2}
-                ${matches.ThirdSet.Left3} ${data[thisID].three3Left}-${data[thisID].three3Right} ${matches.ThirdSet.Right3}
-                ${matches.ThirdSet.Left4} ${data[thisID].three4Left}-${data[thisID].three4Right} ${matches.ThirdSet.Right4}
-            `, inline: true},
-                )
-            message.reply({ embeds: [embed] })
+            // let embed = new EmbedBuilder()
+        preds[thisID][gw][groupNum - 1][group].forEach(element => {
+            embedTable.push(Object.keys(element), Object.values(element))
+        });
+        console.log(embedTable)
+
+        let embed = [];
+        let j = 1;
+        for (let i = 0; i < embedTable.length ; i += 2){
+            embed.push(`${embedTable[i][0]} : ${embedTable[j][0]} | ${embedTable[i][1]} : ${embedTable[j][1]}`)
+            j += 2;
+        }
+        let embedReply = new EmbedBuilder()
+        .addFields(
+            { name: 'Pred: ', value: embed.join('\n')}
+        )
+        message.reply({ embeds: [embedReply] })
+        
+        console.log(embed)
+
+
+
+
+
     }
 }

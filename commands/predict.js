@@ -120,12 +120,12 @@ module.exports = {
                         users[userID][gw][0] = groupOne
                     }
                 }
-                let content = makeEmbed(groupOne, 'group1')
+                let g1 = makeEmbed(groupOne, 'group1')
                 
 
                 let embed = new EmbedBuilder()
                 .addFields(
-                    { name: 'Pred: ', value: content.join('\n')}
+                    { name: 'Pred: ', value: g1.join('\n')}
                 )
                 message.reply({ embeds: [embed] })
                 break;
@@ -155,14 +155,14 @@ module.exports = {
                         users[userID][gw][1] =groupTwo 
                     }
                 }
-                content = makeEmbed(groupTwo, 'group2')
+                let g2 = makeEmbed(groupTwo, 'group2')
                 
 
-                embed = new EmbedBuilder()
+                let embed2 = new EmbedBuilder()
                 .addFields(
-                    { name: 'Pred: ', value: content.join('\n')}
+                    { name: 'Pred: ', value: g2.join('\n')}
                 )
-                message.reply({ embeds: [embed] })
+                message.reply({ embeds: [embed2] })
                 break;
             case '3':
 
@@ -192,14 +192,14 @@ module.exports = {
                         users[userID][gw][2] = groupThree
                     }
                 }
-                content = makeEmbed(groupThree, 'group3')
+                let g3 = makeEmbed(groupThree, 'group3')
                 
 
-                embed = new EmbedBuilder()
+                let embed3 = new EmbedBuilder()
                 .addFields(
-                    { name: 'Pred: ', value: content.join('\n')}
+                    { name: 'Pred: ', value: g3.join('\n')}
                 )
-                message.reply({ embeds: [embed] })
+                message.reply({ embeds: [embed3] })
                 break;
             case '4':
 
@@ -228,14 +228,14 @@ module.exports = {
                         users[userID][gw][3] = groupFour
                     }
                 }
-                content = makeEmbed(groupFour, 'group4')
+                let g4 = makeEmbed(groupFour, 'group4')
                 
 
-                embed = new EmbedBuilder()
+                let embed4 = new EmbedBuilder()
                 .addFields(
-                    { name: 'Pred: ', value: content.join('\n')}
+                    { name: 'Pred: ', value: g4.join('\n')}
                 )
-                message.reply({ embeds: [embed] })
+                message.reply({ embeds: [embed4] })
                 break;
         }
 

@@ -25,24 +25,45 @@
       {
         "group2": [
           {
-            "RB Leipzig": "-",
-            "Shakhtar Donetsk": "-",
+            "RB Leipzig": 2,
+            "Shakhtar Donetsk": 2,
             "Dinamo Zagreb": 2,
             "Chelsea": 2
           },
           {
-            "Sevilla": "-",
-            "Manchester City": "-",
+            "Sevilla": 3,
+            "Manchester City": 3,
             "Borussia Dortmund": 1,
             "FC Copenhagen": 1
           },
           {
-            "Paris Saint Germain": "-",
-            "Juventus": "-"
+            "Paris Saint Germain": 4,
+            "Juventus": 4
           },
           {
-            "Benfica": "-",
-            "Maccabi Haifa": "-"
+            "Benfica": 5,
+            "Maccabi Haifa": 5
+          }
+        ]
+      },
+      null,
+      {
+        "group4": [
+          {
+            "Club Brugge KV": 2,
+            "Bayer Leverkusen": 2
+          },
+          {
+            "Barcelona": 1,
+            "Plzen": 1
+          },
+          {
+            "Inter": 2,
+            "Bayern Munich": 3
+          },
+          {
+            "Tottenham": 2,
+            "Marseille": 3
           }
         ]
       }
@@ -52,19 +73,19 @@
         "group1": [
           {
             "Plzen": 2,
-            "Inter": 2
+            "Inter": 3
           },
           {
-            "Sporting CP": 1,
-            "Tottenham": 1
+            "Sporting CP": 4,
+            "Tottenham": 5
           },
           {
-            "Liverpool": 2,
-            "Ajax": 3
+            "Liverpool": 5,
+            "Ajax": 9
           },
           {
-            "Rangers": 2,
-            "Napoli": 3
+            "Rangers": 9,
+            "Napoli": 2
           }
         ]
       }
@@ -87,6 +108,46 @@
           {
             "AC Milan": 2,
             "Chelsea": 3
+          }
+        ]
+      },
+      {
+        "group2": [
+          {
+            "Shakhtar Donetsk": 2,
+            "Real Madrid": 2
+          },
+          {
+            "Celtic": 1,
+            "RB Leipzig": 1
+          },
+          {
+            "Borussia Dortmund": 2,
+            "Sevilla": 3
+          },
+          {
+            "Paris Saint Germain": 2,
+            "Benfica": 3
+          }
+        ]
+      },
+      {
+        "group3": [
+          {
+            "Napoli": 2,
+            "Ajax": 2
+          },
+          {
+            "Atletico Madrid": 1,
+            "Club Brugge KV": 1
+          },
+          {
+            "Rangers": 2,
+            "Liverpool": 3
+          },
+          {
+            "Bayer Leverkusen": 2,
+            "FC Porto": 3
           }
         ]
       }
