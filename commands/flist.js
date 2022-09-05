@@ -19,17 +19,18 @@
 //PL `Regular Season - num`
 //CL `Group Letter - num`
 module.exports = {
-    name: "fixtures",
+    name: "flist",
     execute(message) {
         const fs = require("fs");
         const { EmbedBuilder } = require('discord.js');
         const leagues = ['PL', 'EL', 'ER', 'BL', 'LL', 'SPL', 'SA', 'CL', 'WC', 'H2H'];
         const msg = message.content.split(' ')
+        const league = msg[2].toUpperCase();
+        console.log(league)
 
-        if (msg.length != 3 || leagues.includes((msg[2])) == false || Number.isInteger(Number.parseInt(msg[1])) == false) {
-            message.react('<:MESSIWUT:881640755058335795>MESSIWUT')
+        if (msg.length != 3 || leagues.includes((league)) == false || Number.isInteger(Number.parseInt(msg[1])) == false) {
             let embed = new EmbedBuilder().addFields({ name: "Code", value: `Try the right syntax 
-            .fixtures GW LEAGUE | EXAMPLE: .fixtures 5 PL
+            .flist GW LEAGUE | EXAMPLE: .flist 5 PL
             League Codes:
             PL = Premiere League
             EL = Europa League
@@ -40,18 +41,18 @@ module.exports = {
             SA = Serie A
             CL = Champions League
             WC = World Cup
-            H2H = Head to Head`})
+            `})
             message.reply({ embeds: [embed] })
         }else{
         
-            const league = msg[2];
+            
             const weekNum = msg[1];
             const join = fs.readFileSync(`jsons/leagues/${league}.json`);
             const data = JSON.parse(join);
             const lastWeek = data.response[(Object.keys(data.response).length - 1)].league.round
             const final = lastWeek.split(' ')
 
-            if (weekNum > 0 && weekNum < Number.parseInt(final[3])){
+            if (weekNum > 0 && weekNum <= Number.parseInt(final[3])){
                 const newfile = data['response'].filter(item => item.league.round.endsWith(` ${weekNum}`) === true);
 
                 let gameweekTable = [];
@@ -69,7 +70,6 @@ module.exports = {
                 
                 console.log('Sent Fixture list')
             }else {
-                message.react('<:MESSIWUT:881640755058335795>MESSIWUT')
                 message.reply(`Game Week Doesnt Exist, Max Scheduled Game Week: ${final[3]}`)
             }
         }

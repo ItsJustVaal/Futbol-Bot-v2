@@ -46,4 +46,5 @@ bot.on("messageCreate", async message => {
   }
 });
 
+
 bot.login(token)
