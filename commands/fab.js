@@ -19,12 +19,12 @@ module.exports = {
         const tweets = response.data.map(tweet => tweet.text)
         let embed = new EmbedBuilder().setColor('#1900ff').setTitle('FABS GREATEST HITS')
 
-
         for(let i = 0; i < 6; i++){
             embed.addFields(
                 { name: '-----------------', value: `- ${tweets[i].replace(/[\r\n\+]/gm, '')}`, inline: true}
             )
         }
+        
         embed.addFields( {name: 'Uses of this command left: ', value: `${data.uses}`})
         message.reply({ embeds: [embed] })
         
