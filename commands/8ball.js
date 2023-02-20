@@ -32,29 +32,7 @@ module.exports = {
     }
 
     choice = [
-      "It is certain",
-      "Without a doubt",
-      "It is decidedly so",
-      "As I see it, yes",
-      "Most likely",
-      "Fuck Yes",
-      "Outlook good",
-      "Signs point to yes",
-      "Better not tell you now",
-      "VAR has a better chance of getting a call right.",
-      "Don’t count on it",
-      "Outlook not so good",
-      "My source (Hannah) say no",
-      "My source (Majid) say Yes.",
-      "Very doubtful",
-      "Fuck no",
-      "I can't answer that properly or the warden will ban me. So... no.",
-      "No.",
-      "Spuds have a better chance of winning literally any trophy",
-      "Brad says No. Kuppa says Yes. You pick what you want.",
-      "Hot damn what a good ass question. Yes.",
-      "Get out.",
-      "What a waste of a question smh. No.",
+      
     ];
 
     let pick = Math.floor(Math.random() * choice.length);
