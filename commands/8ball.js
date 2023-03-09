@@ -32,7 +32,7 @@ module.exports = {
     }
 
     choice = [
-      
+      // add your choices here, we have custom ones
     ];
 
     let pick = Math.floor(Math.random() * choice.length);
